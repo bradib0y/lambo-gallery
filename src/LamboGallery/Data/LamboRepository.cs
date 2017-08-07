@@ -10,7 +10,7 @@ namespace LamboGallery.Data
 
     {
         /* Lambo Repository */
-        private static Lambo[] _lambos = new Lambo[] 
+        private static Lambo[] _lambos = new Lambo[]
         {
             /**/
                         new Lambo()
@@ -59,10 +59,19 @@ namespace LamboGallery.Data
             /**/
         };
 
-        public static Lambo[] GetLambos { get => _lambos; set => _lambos = value; }
 
         /********************/
-        public Lambo GetLambo(int id) { try { return GetLambos[id]; } catch {
-                return GetLambos[new Random().Next(GetLambos.Length)]; } }
-    }
-}
+        public Lambo GetLambo(int id)
+            {
+                try { return _lambos[id]; }
+                catch { return _lambos[new Random().Next(GetLambos().Length)]; }
+            }
+        /********************/
+
+        public Lambo[] GetLambos()
+            {
+                return _lambos;
+            }
+        /********************/
+    }// end of class
+}// end of namespace

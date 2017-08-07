@@ -1,0 +1,32 @@
+﻿@model LamboGallery.Models.Lambo
+
+@{
+    o = Model;
+
+}
+
+<!DOCTYPE html>
+<h2>@Model.DisplayText</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="well">
+            <h5><label>Type:</label> @Model.Type</h5>
+            <h5><label>Variety:</label> @Model.Variety</h5>
+            <h5>Properties:</h5>
+            <div>
+                <ul>
+                    @foreach (var l in Model)
+                        <li>@lp.PropertyName: @lp.PropertyValue</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <h5>Description</h5>
+        @Html.Raw(Model.Description)
+    </div>
+    <div class="col-md-6">
+        <img src=@Model.CoverImageFileName
+             alt=@Model.DisplayText class="img-responsive" />
+    </div>
+</div>
