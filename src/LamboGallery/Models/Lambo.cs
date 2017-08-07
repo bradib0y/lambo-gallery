@@ -11,7 +11,7 @@ namespace LamboGallery.Models
         public string Type { get; set; }
         public string Variety { get; set; }
         public string Description { get; set; }
-        public string[] Properties { get; set; }
+        public LamboProperty[] Properties { get; set; }
         public bool Favorite { get; set; }
 
         public string DisplayText {
