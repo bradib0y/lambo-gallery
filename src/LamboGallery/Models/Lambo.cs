@@ -19,7 +19,7 @@ namespace LamboGallery.Models
         }
 
         public string CoverImageFileName {
-            get { return Type.Replace(" ", "-").ToLower() + "-" + Variety.Replace(" ", "-") + ".jpg"; }
+            get { return "/Images/" + ((Type.Replace(" ", "-") + "-" + Variety.Replace(" ", "-") + ".jpg").ToLower()); }
         }
     }
 }
