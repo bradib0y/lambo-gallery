@@ -59,8 +59,10 @@ namespace LamboGallery.Data
             /**/
         };
 
+        public static Lambo[] GetLambos { get => _lambos; set => _lambos = value; }
+
         /********************/
-        public Lambo GetLambo(int id) { try { return _lambos[id]; } catch {
-                return _lambos[new Random().Next(_lambos.Length)]; } }
+        public Lambo GetLambo(int id) { try { return GetLambos[id]; } catch {
+                return GetLambos[new Random().Next(GetLambos.Length)]; } }
     }
 }
