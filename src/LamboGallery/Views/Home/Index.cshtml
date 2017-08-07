@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style>        .properties {
+            text-align: center;
+            margin: 20px 10px 10px 20px;
+            border: 3px solid green;
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>@ViewBag.Type</h1>
+    <h2>Model @ViewBag.Variety
+    </h2>
+              @Html.Raw(ViewBag.Description)
+    </div>
+    @if (ViewBag.Properties.Length > 0)
+    {
+    <div class= "properties"><h2>Properties:</h2>
+    <ul>
+    @foreach (var s in ViewBag.Properties)
+    {<li>@s</li> }
+        </ul>
+    </div>}
+</body>
+</html>
