@@ -129,6 +129,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\aventador-lp-700-4.jpg" />
+    <Content Include="Images\centenario-one-off.jpg" />
+    <Content Include="Images\huracan-lp-640-4-performante.jpg" />
     <Content Include="obj\Debug\LamboGallery.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\LamboGallery.dll" />
     <Content Include="obj\Debug\LamboGallery.pdb" />
