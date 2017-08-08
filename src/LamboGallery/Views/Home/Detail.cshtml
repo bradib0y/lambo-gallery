@@ -1,7 +1,8 @@
 ﻿@model LamboGallery.Models.Lambo
 
 @{
-    o = Model;
+    ViewBag.Title = "Detail";
+    ViewBag.ShowBackBar = true;
 
 }
 
@@ -16,8 +17,9 @@
             <h5>Properties:</h5>
             <div>
                 <ul>
-                    @foreach (var l in Model)
-                        <li>@lp.PropertyName: @lp.PropertyValue</li>
+                    @foreach (var l in Model.Properties)
+                    {
+                        <li>@l.PropertyName: @l.PropertyValue</li>
                     }
                 </ul>
             </div>

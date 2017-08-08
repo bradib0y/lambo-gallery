@@ -26,7 +26,16 @@
             </div>
         </div>
     </div>
-
+    <!--Back button-->
+    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
+    {
+    <div class="backbar">
+        <div class="container">
+            @Html.ActonLink("Return to List", "Index", null, new { @class = "btn btn-default" })            
+        </div>
+    </div>
+    }
+    <!--/Back button-->
     <div class="container body-content">
         @RenderBody()
         <hr />

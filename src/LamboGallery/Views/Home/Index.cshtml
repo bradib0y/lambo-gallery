@@ -1,18 +1,20 @@
-﻿@Model  LamboGallery.Models.Lambo[]
+﻿@model  LamboGallery.Models.Lambo[]
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lambo Gallery";
 }
 
 <h2>@ViewBag.Title</h2>
 
 <div class="row">
-    @foreach (var l in Model)
-    { 
+    @foreach (var lambo1 in Model)
+    {
     <div class="col-md-3">
-        <h4>@l.DisplayText</h4>
-        <img src="@l.CoverImageFileName"
-             alt="@l.DisplayText"
-             class="img-responsive" />
+        <h4>@Html.ActionLink(lambo1.DisplayText, "Detail", new { id = Array.IndexOf(Model, lambo1) })</h4>
+        <a href="@Url.Action("Detail", new { id = Array.IndexOf(Model, lambo1) } )">
+        <img 
+             src="@lambo1.CoverImageFileName"
+             alt="@lambo1.DisplayText"
+             class="img-responsive" /></a>
     </div>
     }
 </div>
